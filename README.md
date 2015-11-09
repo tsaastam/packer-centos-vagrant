@@ -11,6 +11,16 @@ I've been playing around with automating VM image downloads in a secure, replica
 
 TODO next: explore using Docker to create more lightweight images to run inside each VM (for more granular control).
 
+## TL;DR
+
+```
+packer build centos7_virtualbox.json  # might take a while
+vagrant box add --name centos7 CentOS-7-1503-x86_64-virtualbox.box
+cd vagrant
+vagrant up
+vagrant ssh
+```
+
 ## Detailed HOWTO
 
 ### Pick a suitable image
