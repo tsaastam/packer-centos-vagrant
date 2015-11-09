@@ -1,4 +1,5 @@
 # packer-centos-vagrant
+
 Simple configuration files &amp; scripts for downloading a verified CentOS ISO image with Packer and converting it into a Vagrant box.
 
 ## What &amp; how
@@ -9,9 +10,11 @@ I've been playing around with automating VM image downloads in a secure, replica
 [Packer](https://packer.io/) for downloading the ISO images of the distribution and turning them into Vagrant images  
 [VirtualBox](https://virtualbox.org/) for running the Vagrant images with
 
-TODO next: explore using Docker to create more lightweight images to run inside each VM (for more granular control).
+Note that Packer is capable of creating other kinds of images as well, such as [AWS-compatible ones](https://www.packer.io/intro/platforms.html). Therefore, one can use Packer to create identical images for both AWS deployment (production) and Vagrant (development & testing), or any other such combination. This is obviously useful for making sure the production environment remains predictable and testable. However in this short tutorial only Vagrant images are considered.
 
-(Please note that as presented these scripts are not really that secure; by "secure" I mean here mainly that the checksums are properly verified, so that the whole process can be safely and predictably replicated from start to finish. Proper securing of yum updates, user accounts etc is left as an exercise for the reader.)
+Another thing to explore would be to use Docker inside the main image to run each service separately in its own Docker container. These containers could also be built from scratch in a replicable, secure way. In this use case Docker would be a lower-granularity system and the details of the Docker deployment would depend on the details of what software and which services are being deployed inside each top-level image.
+
+(Please note that as presented these scripts are not really that secure; by "secure" I mean here mainly that the checksums are properly verified, so that the whole process can be safely and predictably replicated from start to finish. However, proper securing of yum updates, user accounts &amp; keys etc is left as an exercise for the reader.)
 
 ## TL;DR
 
