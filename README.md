@@ -121,4 +121,4 @@ vagrant ssh
 
 Congratulations, you now have a consistent, easily replicable Vagrant VM image that you can install on all your machines.
 
-I hope this has helped you to get started. To proceed further, there are many other projects around with more information and detailed templates; see e.g. [https://github.com/boxcutter/centos](https://github.com/boxcutter/centos).
+I hope this has helped you to get started. To proceed further with Packer, there are many other projects around with more information and detailed templates; see e.g. [https://github.com/boxcutter/centos](https://github.com/boxcutter/centos).
