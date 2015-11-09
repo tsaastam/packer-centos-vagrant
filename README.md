@@ -11,6 +11,8 @@ I've been playing around with automating VM image downloads in a secure, replica
 
 TODO next: explore using Docker to create more lightweight images to run inside each VM (for more granular control).
 
+(Please note that as presented these scripts are not really that secure; by "secure" I mean here mainly that the checksums are properly verified, so that the whole process can be safely and predictably replicated from start to finish. Proper securing of yum updates, user accounts etc is left as an exercise for the reader.)
+
 ## TL;DR
 
 ```
