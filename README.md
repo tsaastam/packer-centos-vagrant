@@ -3,10 +3,10 @@ Simple configuration files &amp; scripts for downloading a verified CentOS ISO i
 
 ## What &amp; how
 
-I've been playing around with automating VM image downloads in a secure, easily replicable way. For this I'm using the following software:
+I've been playing around with automating VM image downloads in a secure, replicable way. For this I'm using the following software:
 
-[CentOS](https://centos.org/) as my choice of Linux distribution
-[Packer](https://packer.io/) for downloading the ISO images of the distribution and turning them into Vagrant images
+[CentOS](https://centos.org/) as my choice of Linux distribution  
+[Packer](https://packer.io/) for downloading the ISO images of the distribution and turning them into Vagrant images  
 [VirtualBox](https://virtualbox.org/) for running the Vagrant images with
 
 TODO next: explore using Docker to create more lightweight images to run inside each VM (for more granular control).
@@ -106,4 +106,4 @@ vagrant ssh
 
 Congratulations, you now have a Vagrant VM image that you can install on all your machines.
 
-For more information and detailed templates, see e.g. https://github.com/boxcutter/centos .
+There are many other projects around with more detailed templates and better information; see e.g. [https://github.com/boxcutter/centos](https://github.com/boxcutter/centos).
