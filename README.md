@@ -15,7 +15,7 @@ TODO next: explore using Docker to create more lightweight images to run inside 
 
 ### Pick a suitable image
 
-For example, to use CentOS, go to https://centos.org/ -> more choices -> mirrors, pick a suitable mirror, then pick whichever ISO file you need. I used http://ftp.heanet.ie/pub/centos/7/isos/x86_64/ . Be sure to verify the checksums (SHA256 and PGP).
+For example, to use CentOS, go to https://centos.org/ -> more choices -> mirrors, pick a suitable mirror, then pick whichever ISO file you need. I used [http://ftp.heanet.ie/pub/centos/7/isos/x86_64/](http://ftp.heanet.ie/pub/centos/7/isos/x86_64/). Be sure to verify the checksums (SHA256 and PGP).
 
 Here are the relevant snippets from the Packer config file:
 
@@ -35,11 +35,11 @@ Here are the relevant snippets from the Packer config file:
 
 Notice that if you're using VirtualBox, you will also want to specify the guest additions ISO and its checksum.
 
-Packer will cache the ISO image it downloads. You probably want to add the Packer cache directory into `.gitignore` (see `dot_gitignore`).
+Packer will cache the ISO image it downloads. You probably want to add the Packer cache directory into `.gitignore` (see [dot_gitignore](dot_gitignore)).
 
 ### Configure Packer to boot &amp; install your image automatically
 
-With CentOS automatic installations are done with a Kickstart script. See `http/ks.cfg` for an example and https://wiki.centos.org/TipsAndTricks/KickStart for a reference.
+With CentOS automatic installations are done with a Kickstart script. See [http/ks.cfg](http/ks.cfg) for an example and https://wiki.centos.org/TipsAndTricks/KickStart for a reference.
 
 Once you're happy with your autoboot file, configure Packer to use it like so:
 
@@ -68,7 +68,7 @@ Relevant config:
   ],
 ```
 
-For the scripts, see `script/`. Note that these are very rudimentary and not ready for actual production, but they're good enough for my personal use.
+For the scripts, see [script/](script/). Note that these are very rudimentary and not ready for actual production, but they're good enough for my personal use.
 
 ### Set up your provider, run Packer and see what happens
 
@@ -94,7 +94,7 @@ This should eventually result in a file called `CentOS-7-1503-x86_64-virtualbox.
 vagrant box add --name centos7 CentOS-7-1503-x86_64-virtualbox.box
 ```
 
-And then to boot it up with Vagrant, you can use the rudimentary Vagrant file in `vagrant/`:
+And then to boot it up with Vagrant, you can use the rudimentary Vagrant file in [vagrant/](vagrant/):
 
 ```
 cd vagrant
@@ -106,4 +106,4 @@ vagrant ssh
 
 Congratulations, you now have a Vagrant VM image that you can install on all your machines.
 
-There are many other projects around with more detailed templates and better information; see e.g. [https://github.com/boxcutter/centos](https://github.com/boxcutter/centos).
+I hope this has helped you to get started. To expand on this, there are many other projects around with more detailed templates and better information; see e.g. [https://github.com/boxcutter/centos](https://github.com/boxcutter/centos).
