@@ -1,0 +1,4 @@
+# example .gitignore
+packer_cache
+CentOS*.box
+.vagrant
