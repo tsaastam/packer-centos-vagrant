@@ -17,7 +17,7 @@ TODO next: explore using Docker to create more lightweight images to run inside 
 
 For example, to use CentOS, go to https://centos.org/ -> more choices -> mirrors, pick a suitable mirror, then pick whichever ISO file you need. I used [http://ftp.heanet.ie/pub/centos/7/isos/x86_64/](http://ftp.heanet.ie/pub/centos/7/isos/x86_64/). Be sure to verify the checksums (SHA256 and PGP).
 
-Here are the relevant snippets from the Packer config file:
+Here are the relevant snippets from the [Packer config file](centos7_virtualbox.json):
 
 ```
   "builders": [
